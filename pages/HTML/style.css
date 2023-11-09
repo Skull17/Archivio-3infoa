@@ -86,6 +86,20 @@ article a {
     font-size: large;
 }
 
+/* Stile per il piè di pagina */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Stile per i link nel piè di pagina */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
 #home {
     width: 20px;
     height: 20px;
