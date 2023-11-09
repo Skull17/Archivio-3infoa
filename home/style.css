@@ -196,3 +196,7 @@ form button:hover {
 .contact-text {
     margin-left: 10px; /* Aggiungi uno spazio dal bordo sinistro */
 }
+
+.navbar-toggler {
+    background-color: #ffa500;
+}
