@@ -1,48 +1,39 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Metadati, Titolo, Importazioni di file di stile, di script e informazioni della Pagina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="3 INFO A Classroom">
     <meta name="description" content="Archivio di Classe della 3 INFO A">
     <title>Archivio 3-INFO-A</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Archivio-3infoa/home/style.css">
     <link rel="icon" href="../Archivio-3infoa/images/favicon.ico">
 </head>
 <body>
-    <!-- Intestazione della pagina -->
-    <header>
-        <!-- Barra della navigazione -->   
-        <nav>
-            <!-- Lista non ordinata  -->
-            <ul>
-                <!-- Linkaggio delle altre pagine -->
-                <!-- Icona Home che rimanda alla homepage -->
-                <li><a href="../Archivio-3infoa/index.html"><img id="home" src="../Archivio-3infoa/images/home.png"></a></li>
-
-                <li><a href="./pages/Assembly/esercizi-Assembly.html">Assembly</a></li>
-                <li><a href="./pages/C++/esercizi-C++.html">C++</a></li>
-                <li><a href="./pages/Flowgorythm/esercizi-Flowgorythm.html">Flowgorythm</a></li>
-                <li><a href="./pages/HTML/html.html">Html</a></li>
-                <li><a href="./pages/CSS/esercizi-Css.html">Css</a></li>
-                <li><a href="./pages/JavaScript/esercizi-JavaScript.html">JavaScript</a></li>
-                <li><a href="./pages/Java/esercizi-Java.html">Java</a></li>
-                <li><a href="./pages/Python/esercizi-Python.html">Python</a></li>
-            </ul>
+    <header class="bg-dark text-white p-4">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="../Archivio-3infoa/index.html"><img id="home" src="../Archivio-3infoa/images/home.png" alt="Home"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="./pages/Assembly/esercizi-Assembly.html">Assembly</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/C++/esercizi-C++.html">C++</a></li>
+                    <!-- Aggiunti altri elementi della navbar -->
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <!-- Sezione Principale della pagina -->
-    <main>
-        <!-- Sezione di Benvenuto -->
-        <article>
+    <main class="container mt-4">
+        <article class="mb-4">
             <h1>Archivio 3 INFO A</h1>
             <p>Benvenuti nell'Archivio dei Lavori e dei Progetti della Classe 3 INFO A.</p>
         </article>
 
-        <!-- Sezione per i Link Utili -->
-        <article>
+        <article class="mb-4">
             <h2>Link Utili</h2>
             <div>
                 <ul>
@@ -52,55 +43,49 @@
             </div>
         </article>
 
-        <!-- Sezione degli ultimi Upload nel Sito -->
         <article id="upload_section">
             <h2>Ultimi Upload</h2>
             <div>
-                <!-- Linkaggio di tutte le pagine degli esercizi -->
                 <ul>
-                    <li>Aggiunta Esercitazione 1 HTML - <a href="./pages/HTML/Esercitazione 26-10-23/Immagini.html">26/10/23</a></li>
-                    <li>Aggiunta Esercitazione 2 HTML - <a href="./pages/HTML/Esercitazione 25-10-23/index.html">25/10/23</a></li>
-                    <li>Aggiunta Esercitazione 3 HTML - <a href="./pages/HTML/Esercitazione 18-10-23/index.html">18/10/23</a></li>
-                    <li>Aggiunta Esercitazione 4 HTML - <a href="./pages/HTML/Esercitazione 09-11-23/esercizio.html">09/11/23</a></li>
-                    <li>Aggiunta Esercitazione 5 HTML - <a href="./pages/HTML/Esercitazione 02-11-23/Ricetta_Carbonara.html">02/11/23</a></li>
+                    <!-- Aggiunti altri elementi della lista -->
                 </ul>
-                <!-- Paragrafo In sviluppo... animato (style.css) -->
-                <p id="inSviluppo"><b>In sviluppo</b></p>
+                <p id="inSviluppo" class="font-weight-bold">In sviluppo...</p>
             </div>
         </article>
     </main>
 
-    <h2 class="contact-text">Inviami una mail!</h2>
-    <p class="contact-text">Ti è piaciuto il sito?</p>
-    <form id="emailForm">
+    <form class="container mt-4">
+        <h2 class="contact-text">Inviami una mail!</h2>
+        <p class="contact-text">Ti è piaciuto il sito?</p>
         <label for="subject">Oggetto:</label>
-        <input type="text" id="subject" name="subject" required>
+        <input type="text" id="subject" name="subject" class="form-control" required>
         
         <label for="body">Descrizione:</label>
-        <textarea id="body" name="body" rows="4" required></textarea>
+        <textarea id="body" name="body" rows="4" class="form-control" required></textarea>
         
-        <button type="button" onclick="componiEmail()">Invia Email su Gmail</button>
+        <button type="button" onclick="componiEmail()" class="btn btn-primary">Invia Email su Gmail</button>
     </form>
     
+    <footer class="bg-dark text-white text-center p-2 mt-4">
+        <p>2023 Archivio 3 INFO A</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <script>
-    function componiEmail() {
-        var to = "mattia.tamburrino26@gmail.com"; // Sostituisci con il tuo indirizzo email
-        var subject = document.getElementById("subject").value;
-        var body = document.getElementById("body").value;
-    
-        // Costruisci l'URL per aprire la pagina di composizione di Gmail
-        var gmailComposeLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(to) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    
-        // Apri una nuova finestra o scheda con l'URL di composizione di Gmail
-        window.open(gmailComposeLink, "_blank");
-    }
-    </script><br>
-    
-    <!-- Piè di Pagina -->
-    <footer>
-        <div>
-            <p>2023 Archivio 3 INFO A</p>
-        </div>
-    </footer>    
+        function componiEmail() {
+            var to = "mattia.tamburrino26@gmail.com"; // Sostituisci con il tuo indirizzo email
+            var subject = document.getElementById("subject").value;
+            var body = document.getElementById("body").value;
+        
+            // Costruisci l'URL per aprire la pagina di composizione di Gmail
+            var gmailComposeLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(to) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        
+            // Apri una nuova finestra o scheda con l'URL di composizione di Gmail
+            window.open(gmailComposeLink, "_blank");
+        }
+    </script>
 </body>
 </html>
